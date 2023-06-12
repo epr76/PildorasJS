@@ -9,6 +9,33 @@
 <body>
     <script type="text/javascript">
 
+        let entradaNotas = prompt("Introduzca su nota del examen: ");
+
+        if(entradaNotas<5){
+
+            document.write("Has suspendido , lo siento");
+
+        }
+        else if(entradaNotas<6){
+
+            document.write("Has sacado un calificacion con un suficiente");
+
+        }
+        else if(entradaNotas<7){
+
+            document.write("Has sacado una calificacion de bien.");
+
+        }
+        else if(entradaNotas<9){
+
+            document.write("Has sacado una calificacion de notable");
+
+        }
+        else {
+            
+            document.write("Has sacado una calificacion de Excelente")
+
+        }
 
 
     </script>
