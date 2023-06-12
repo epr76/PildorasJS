@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let contador = 0;
+
+        while(contador<10){
+            contador++;
+            document.write(`El contador ahora mismo esta en la posicion ${contador}<br>`);
+            
+        }
+        
+     
+        let numero = prompt("Introduce un numero por favor: ");
+
+        while(numero<0){// si introducimos un numero negativo , entrara en la condicion del while.
+        
+            numero = prompt("Introduce un nº,POSITIVO");
+
+        }
+        
+        document.write(Math.sqrt(numero));
+    </script>
+    
+</body>
+</html>
