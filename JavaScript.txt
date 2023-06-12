@@ -31,7 +31,7 @@ JavaScript(ES6) code snippets:
 
 Video 3 : Ubicacion e Integracion.
 
-En la etiqueta el type text/javascript es una instruccion para decir que dentro va JavaScript.
+En la etiqueta el type text/javascript es una instruccion para decir que dentro va JavaScript.    
 
 Video 4 : Caracteristicas
 Video 5: Tipos,valores,variables y constantes.
