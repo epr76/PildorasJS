@@ -1,0 +1,92 @@
+Video1: 
+Software necesario:
+Navegadores (distintos) para asi probar la aplicacion en distintos navegadores.
+Editor de texto plano: bloc de notas ,etc.
+IDE : visual estudio code , Sublime , Atom.
+
+Versiones: 
+La primera fue la 1.2 en el 1992 presentada en ECMA por Netscape.
+Caracteristicas de JavaScript:
+Dianmico
+Lenguaje de alto nivel
+Interpretado
+Adaptado a POO
+Variable sin tipo
+Sintaxis similar a Java.
+Frontend y Backend (Node.js)
+
+INTEGRACION CON HTML
+
+Head: Podemos ubicarlo con la etiqueta <script type="text/javascript"> introducimos el codigo Javascript en este espacio </script>, cuando lo ubicamos 
+en el head cuando vayamos a reutilizar mas veces el codigo en el body del documento HTML .
+Body: Igual que hemos hecho en el head , pero dentro del body, lo ubicamos aqui una vez solamente.
+Fuera del html: Introducimos en el head, <script type="text/javascript" src="codigo.javascript.js></script>, en general lo hacemos asi cuando lo vamos a reutilizar
+varias veces en nuestra pagina web( Un ejemplo cuando tenemos 30 paginas HTML , nos sirve mucho hacerlo en un archivo externo).
+
+VIDEO 2: Instalacion VSC
+plugins utiles:
+Live server: Nos deja ver los cambios que hacemos en las paginas web sin tener que ir al navegador.
+emmet : Viene preinstalado en VSC, nos proporciona crear bloques de codigo con shortcuts
+JavaScript(ES6) code snippets: 
+
+Video 3 : Ubicacion e Integracion.
+
+En la etiqueta el type text/javascript es una instruccion para decir que dentro va JavaScript.
+
+Video 4 : Caracteristicas
+Video 5: Tipos,valores,variables y constantes.
+valores: Es cualquier dato para representar algo (5,5.6,"Juan",Objetos(POO),true,arrays).
+Tipo: Primitivos (Numeros, Strings, Booleans, null,undefined,etc), Objetos (arrays y POO) y Symbol.
+Variables: Es un espacio en la memoria del ordenador donde se almacenara un valor que podra cambiar (variara o no) durante la ejecucion del programa.Que significa 
+declarar una variable , es cuando especificamos el nombre identificativo de ese espacio en la memoria y ocasionalmente el valor que hay en su interior.
+Constantes:Es lo mismo que una variable , pero la diferencia el valor introducido NO SE PODRA CAMBIAR EL VALOR ASIGNADO DURANTE LA EJECUCION DEL PROGRAMA.
+
+DECLARACION DE VARIABLES.
+- var nombrePersona = "Juan"; // Declaracion explicita
+- let nombreMascota = "Toby"; // Tambien es una declaracion explicita, var y let es casi igual, mas adelante lo explicara.
+
+- var edadPersona; 
+// despues de unas lineas de codigo le damos valor mas abajo
+edadPersona = 26; // esto tambien ha sido una declaracion explicita
+
+peso = 85; //declaracion implicita , al no introducir var o let , tenemos que dar nombre y valor a la vez.
+
+DECLARACION DE CONSTANTES:
+const COLOR = "Azul"; // Primero pondremos la palabra reservada const , el nombre de la constante en mayusculas y su valor.( Se pone en mayusculas para tener una buena practica )
+
+Video 6: Operadores.
+Asignacion: Es el signo =
+Aritmeticos : suma + , resta - ,multiplicacion * , division /.
+Incremento: ++ augmenta el valor en una variable.
+Para augmentar podemos hacerlo : num1++; o document.write(++num1); esta asignacion funciona por el flujo de ejecucion, que va de derecha a izquierda, porque le estamos diciendo incrementame el num2
+ 
+Decremento: -- reduce el valor de una variable.
+
+//para hacer un cambio de linea en el espacio JS, document.write("<br>");
+
+Resto o modulo % : Este operador nos devuelve el resto de una division, nos devolvera 0 si es una division exacta o el resto de 0 si es una division inexacta.
+Aritmeticos abreviados: Suma += , resta -=, multiplicacion *=, division /=.
+Concatenacion de cadenas +: Si aplicamos cadenas de texto o valores numericos une las variables o constantes. ( Hace una frase).
+
+OPERADORES LOGICOS
+Y LOGICO &&: Se utiliza para comparar dos condiciones o mas , si se cumplen las condiciones del interior entrara.
+O LOGICO ||: Se utiliza para ver si las una de las condiciones , se cumplen.
+OPERADOR NO/NEGACION !: Sirve para invertir el sentido de una condicion.
+OPERADORES DE COMPARACION :Igualdad ==, igualdad estricta ===, diferente que != ,desigualdad estricta!==, mayor que >, menor que <, mayor o igual que >= , menor o igual que <=.
+ 
+VOID : Es la forma de especificar que un metodo no devuelve nada.
+TYPE OFF: Nos define que tipo contiene una varibale , por ejemplo si tenemos una variable con un 7 y ponemos document.write(typeoff(num1)); nos imprimira un 7 .
+
+VIDEO 9 Conversiones entre tipos:
+Implicitas:Lo hace el propio lenguaje , mientras se ejecuta el programa. Por ejemplo un string lo pasa a numerico , sin necesidad de que el programador lo indique. 
+Explicitas:Son las que el programador indica.
+NaN: Not a number.
+parseInt(): Esta funcion sirve para pasar a int .
+parseFloat(): Esta funcion sirve para pasar a float.
+
+Video 10 : Estructuras de control: Controlan el flujo de ejecucion de un programa.
+Tenemos tres agrupaciones ( Condicionales , Bucles , Saltos)
+Video 11 Condicion IF
+video 12
+video 13 else if:
+Otra forma de concatenar sin utilizar el mas hacemos esta configuracion : document.write (`string${VARIABLE}continuacion string`);

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let edad=prompt("Introduce tu edad , porfavor: ");
+
+        let saldo=prompt("Introduce tu saldo: ");
+
+        if(edad>=18){
+
+            document.write("Es mayor de edad</br>");
+            if(saldo>=150){
+                document.write("Tienes saldo suficiente para obtener el carnet");
+            }else{
+                document.write("No tienes suficiente saldo , para obtener el carnet")
+            }
+        
+        }
+        else{
+            edad=18-edad;
+            document.write(`No es mayor de edad , vuelve dentro de ${edad} años.</br>`)
+            if(saldo>=150){
+                document.write(`Aunque no tengas la edad ,tienes ${saldo} euros para poder obtenerlo, no hace falta que ahorres mas.`)
+            }else{
+                document.write("Deberias plantearte ahorrar tu saldo no es suficiente, para obtener el carnet")
+            }
+        
+        }
+
+
+
+
+    </script>
+</body>
+</html>
