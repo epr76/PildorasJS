@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let edades = [7,9,15,25,37];
+
+        document.write(edades[0] + "<br>");
+        document.write(edades[1] + "<br>");
+        document.write(edades[2] + "<br>");
+        document.write(edades[3] + "<br>");
+        document.write(edades[4] + "<br>");
+
+        for(let i = 0 ; i<5;i++){
+            // este bucle for , se inicia en la posicion 0 y sale del bucle cuando i es menor que 5.
+
+            document.write(edades[i] + "<br>");
+        }
+
+        for(let i = 0 ; i<edades.length;i++){
+            // con esta variacion enseñara todas las posiciones del array, pero cogiendo la finalizacion en el largo del array.
+            
+            document.write(edades[i] + "<br>");
+        }
+
+        for(let i of edades){
+            // sintaxis de bucle for of. minuto 20.00 del video 18
+            document.write(i + "<br>");
+        }
+
+        let datos = [[1,2,3],[4,5,6],[7,8,9]];
+
+        for (let i = 0; i<3 ; i ++){
+            for(let j =0 ; j <3 ;j++){
+
+                document.write(datos[i][j] + "<br>");
+            }    
+        }
+
+        for(dim1 of datos){
+            for(dim2 of dim1){
+                document.write(dim2);
+            }
+        }
+
+        email = "juan@pildorasinformaticas.es";
+            // para saber si un email contiene una arroba.
+        for(letra of email){
+            if(letra=="@"){
+                document.write(true);
+            }
+        }
+        
+    </script>
+</body>
+</html>

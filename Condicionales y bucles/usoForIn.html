@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let Coche = { color:"rojo" , peso:1200 , potencia:250 , cilindrada:2000 };
+
+        let claveValor="";
+
+        for(let [k,v] of Object.entries(Coche)){
+
+                //con este bucle for of , conseguimos almacenar los parametros del coche
+                //k hace referencia al key que seria el nombre clave
+                //v hace referencia al value , al valor 
+            claveValor += k + ":" + v;
+            claveValor += " ";
+        }
+
+////// FOR IN
+
+        for(let propiedad in Coche){
+
+            //con este bucle accederemos solo a las propiedades del objeto
+
+            document.write(propiedad + "</br>");
+        }
+
+        for(let propiedad in Coche){
+
+            //con este bucle accederemos solo a las propiedades del objeto
+
+            document.write(propiedad + " : "+Coche[propiedad] + "</br>");
+        }
+
+    </script>
+</body>
+</html>

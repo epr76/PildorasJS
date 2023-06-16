@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let nAle = parseInt(Math.random()*100);
+        let nUser;
+        let intentos = 0;
+
+        do{
+
+            nUser= prompt("Introduce un valor entero del 0 al 1000");
+             
+                
+        if(nUser<nAle){
+
+                alert("El numero introducido es mayor al establecido.");
+                
+
+            }
+        if(nUser>nAle){
+
+                alert("El numero introducido es menor al establecido.");// mejor poner alert que prompt
+              
+            }
+
+            intentos ++;
+
+        }while(nUser!=nAle);
+        
+        
+        document.write(`Lo has conseguido en ${intentos} era el numero ${nAle}`);
+
+    </script>
+</body>
+</html>

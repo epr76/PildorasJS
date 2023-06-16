@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        for(let contador = 0; contador<10 ; contador++){
+            // hasta que el contador no llegue a 10, no parar de imprmir , 
+            //porque la condicion pone que contador tiene que ser mayor que 10.
+
+            document.write(`Vuelta de bucle nº ${contador}<br>`);
+        }
+        for(let x = 1, y = 2; x<10 ; x++ , y++){
+            // tenemos dos variables declaradas en inicio, una condicion de salida y dos variables en incremento.
+            document.write(`${x} es menor que ${y}<br>`);
+        }
+
+        let inicio = prompt("Introduce el inicio del bucle");
+
+        let final = prompt("Introduce el final del bucle");
+
+        for (let x = inicio; x < final ; x++){
+
+            document.write(`Vuelta nº ${x} <br>`);
+        }
+
+        let continuar = true;
+
+        for (let x = inicio; continuar ; x++){
+
+             document.write(`Vuelta nº ${x} <br>`);
+            
+             if(x==15) continuar = false;
+        }
+
+    </script>
+</body>
+</html>
