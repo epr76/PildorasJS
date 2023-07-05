@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+      let num1 = parseInt(prompt("Introduzca el primer numero"));
+
+      let num2 = parseInt(prompt("Introduce el segundo numero : "));
+
+      let contador = 0 ;
+
+      for(let numero_evaluar = num1 ; numero_evaluar < num2 ; numero_evaluar++){
+        
+        let primo = true;
+
+        for(let i = 2 ; i < numero_evaluar ; i++ ){
+
+            if(numero_evaluar % i == 0){
+
+                primo = false;
+
+                break;
+            }
+        }
+
+        if(primo){
+
+            document.write(numero_evaluar + "</br>");
+
+            contador ++;
+
+            if (contador == 3){
+
+                break;
+            }
+
+
+        }
+      }
+//NI PUTA IDEA COMO SE HACE
+
+    </script>
+</body>
+</html>

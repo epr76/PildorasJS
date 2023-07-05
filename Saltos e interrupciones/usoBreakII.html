@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let paises=[];
+        let num=0;
+
+// con este bucle logramos que cada vez que se introduzca un dato se guarde en el array
+//aunque cuando pulsemos cancelar, saldremos del bucle.
+
+        // do{
+
+        //     num+=1; //al poner el incremento despues del prompt no funciona.
+        //     paises[num]= prompt("Introduce la nacionalidad, porfavor");
+            
+
+        // }while(paises[num]!=null);
+
+// otra forma de hacer el bucle infinito.
+
+        // while(true){
+
+        //     paises[num]= prompt("Introduce la nacionalidad, porfavor");
+
+        //     if(paises[num]==null) break;
+
+        //     num +=1;
+
+        // }
+
+//otra forma de hacer el codigo mas simple, pero se convierte en un bucle infinito.
+        
+    while(true){
+        paises[num]= prompt("Introduce la nacionalidad, porfavor");
+
+            if(paises[num]=="España" || paises[num]=="españa" || paises[num]=="ESPAÑA"){
+
+                document.write("Has acertado , era España");
+                break;
+            }
+        num+=1;
+    }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let ciudades=[["Bogota " , "Medellin " , "Cali "],["Barcelona ", "Madrid" , "Malaga "], ["Roma ", "Milan ", "Venecia "]];//array bidimensional
+       
+        buclePrincipal:for(let i=0; i<3 ; i++){// hemos identificado el buclePrincipal
+
+            for(let j=0; j<3 ; j++){
+
+                if(ciudades[i][j]=="Madrid"){
+
+                    document.write("Madrid encontrado </br>");
+                    break buclePrincipal; // al poner el break con la identificacion del bucle se sale.
+                }
+
+                document.write(ciudades[i][j] + "</br>");
+
+                    
+            }
+
+            document.write("Estoy en el bucle principal </br>");
+        }
+       
+    </script>
+</body>
+</html>

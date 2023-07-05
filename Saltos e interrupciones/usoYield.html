@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- video 27 yild es un generador , mas adelante lo enseñara, se parece a una funcion-->
+    <script type="text/javascript">
+
+        function* rango(desde, hasta){
+
+                for (let i = desde ; i<= hasta ; i++){
+                    //i menor o igual hasta; )
+
+                    yield i;
+                }
+
+        }
+
+        let numero = rango(5,15);
+
+        document.write(numero.next().value + "</br>"); //aqui nos devolvera de uno a uno de la variable numero.
+        // nos muestra por consola el numero 5 que es el inicial.
+        //esto nos sirve para ir cogiendo valores poco a poco cuando es necesario
+        //despues de estas lineas por ejemplo , necesitamos el valor 6 .ponemos otra vez el codigo y lo recogemos.
+        document.write(numero.next().value + "</br>");
+
+    </script>
+</body>
+</html>

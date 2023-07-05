@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let salarios = []; //array creado vacio para almacenar los salarios
+        let num_trabajador = 0;
+
+        for(let i = 0; i < 5 ; i++){
+        // con este bucle conseguimos introducir 4 salarios en el array
+            
+            num_trabajador+=1; // incremento del trabajador
+
+            let salario = prompt("Introduce el salario del trabajador " + num_trabajador);
+
+            salarios[i] = salario - (salario*0.25); // con esta linea reducimos un 25% del salario.
+
+        }
+
+        while(num_trabajador<5){
+// es el mismo codigo que antes pero con el while, pero la diferencia que hasta que no introduzcamos un salario no saldra del bucle.
+
+
+            
+
+            let salario = prompt("Introduce el salario del trabajador " + num_trabajador);
+            if (!salario){
+                continue;
+            }
+
+            salarios[num_trabajador] = salario - (salario*0.25); // con esta linea reducimos un 25% del salario.
+            
+            num_trabajador+=1; // incremento del trabajador aqui lo ponemos al final por el flujo de ejecucion , porque si no en el prompt saldria el numero del siguiente trabajador.
+            
+
+        }
+
+        for(salario of salarios){
+            //  la variable salario de este bucle for of es distinta a la del bucle for anterior
+            // recuerda que esa variable esta creada dentro del for y al ser declarada dentro de ese bucle no se puede utilizar fuera.
+
+            if(!salario){
+            // con esta instruccion hemos conseguido que si el contenido es vacio
+            // esta no la imprime.
+
+                continue;
+
+            }
+
+            document.write(salario + "</br>");
+        
+
+        }
+    </script>
+</body>
+</html>

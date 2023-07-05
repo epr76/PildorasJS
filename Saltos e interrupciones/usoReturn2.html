@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+         document.write("texto de ejemplo 1 </br>");
+
+         document.write("texto de ejemplo 2 </br>");
+
+        function calculo(operador1 , operador2){
+
+                if(isNaN(operador1) || isNaN(operador2)){             
+// con esta condicion estamos examinando si los operadors son o no numericos
+                   
+                    return "Imposible calcular . uno de los valores no es numerico";
+
+                }
+                else{//este else se podria eliminar.
+
+                    return operador1 + operador2;
+                }
+            }
+
+       
+             
+         document.write("texto de ejemplo 3 </br>");
+
+         document.write("texto de ejemplo 4 </br>");
+
+         document.write("El resultado es : " + calculo(9,5));
+    </script>
+</body>
+</html>
