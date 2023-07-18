@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+       
+        let empleado = {
+
+            salario: 40000000,
+            comision: 1000000,
+            toString:function(){return `(${this.salario}, ${this.comision})`;}
+        };
+
+        document.write(empleado.toString());
+       
+        let empleado2 = {
+
+            salario:40000000,
+            comision:1000000,
+            toLocaleString:function(){return `(${this.salario.toLocaleString()},${this.comision.toLocaleString()})`;}
+        };
+        //la diferencia entre toLocalString y toString , es que nos devolvera el texto "acorde" a como se escribe en esa region
+        //si ponemos una fecha en eeuu va asi año , mes , dia . en cambio en españa va dia,mes,año. este metodo adapta a la region donde se encuentra la maquina.
+
+        document.write(empleado2.toLocaleString());
+
+        document.write("</br>");
+
+        let fecha = new Date(2021,9,21);
+
+        document.write(fecha);
+        document.write("</br>");
+        document.write(fecha.toLocaleString());
+        document.write("</br>");
+        document.write(fecha.valueOf());
+
+        let curso = new String ("Curso de JavaScript");
+
+        console.log(curso);// asi vemos en consola solamente el objeto
+        console.log(curso.valueOf()); //aqui podemos ver el valor del objeto.
+
+        document.write("</br>");
+
+        // forma nueva de dar propiedades video 35 minuto 12.00
+
+       const EJEMPLONOMBRE = "color";
+
+       function nombrePropiedad(){return "potencia" + "_coche"};
+
+       let coche = {};
+
+       coche[EJEMPLONOMBRE]="verde";
+
+       coche[nombrePropiedad()] = 400
+       
+       let coche2 = {
+        [EJEMPLONOMBRE]:"verde",
+
+        [nombrePropiedad()]:400
+
+       };
+
+       //spread operator nos sirve para copiar las propiedades de distintos objetos.
+       let coche3 = {color:"amarillo",potencia:340};
+
+       let furgoneta = {capacidad:"grande",autonomia:"extendida"};
+
+       let suv = {...coche3,...furgoneta};
+
+       console.log(suv);
+        
+
+    </script>
+</body>
+</html>

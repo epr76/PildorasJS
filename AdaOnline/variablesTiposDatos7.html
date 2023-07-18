@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+// Meses por día
+
+// Crear variables que contengan arrays de strings con los nombres de meses, un array para meses de 31 días, uno para de 30, y otro para 29. Completar cada array con los nombres correspondientes. Mostrarlos en un mensaje indicando cuál es cuál,
+//  p.ej: "Meses con 31 días: Enero, Marzo, Mayo...".
+
+        let dias31 = ["Enero","Marzo","Mayo","Julio","Agosto","Octubre","Diciembre"];
+
+        let dias30 = ["Abril","Junio","Septiembre","Noviembre"];
+
+        let dias29 = ["Febrero"];
+
+
+        document.write("Los meses con 31 dias son los siguientes: ");
+        
+      for (let i of dias31){
+
+        document.write(i + ",");
+      }
+
+      document.write("</br>");
+
+      document.write("Los meses con 30 dias son los siguientes: ");
+
+      for(let i of dias30){
+
+        document.write(i + ",");
+
+      }
+      document.write("</br>");
+      document.write("Los meses con 29 dias son los siguientes: ");
+
+      for (let i of dias29){
+
+        document.write(i);
+      }
+
+    </script>
+</body>
+</html>

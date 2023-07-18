@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+       
+        let triangulo = {
+            base:12,
+
+            altura:15,
+
+            area:function(){return (this.base * this.altura)/2;}
+
+        };
+//Ahora podemos abreviar la propiedad
+        let triangulo2 = {
+            base:12,
+
+            altura:15,
+//aqui vemos como simplemente poniendo en la propiedad los dos parentesis y abriendo corchetes + sus calculos, nos hace
+//lo mismo que la function de arriba
+            area(){return (this.base * this.altura)/2;}
+        };
+
+        document.write(triangulo.area());
+
+        document.write("</br>");
+
+        document.write(triangulo2.area());
+       
+        document.write("</br>");
+
+        let triangulo3 = {
+
+            base:12,
+
+            altura:15,
+
+            get area(){
+
+                return (this.base * this.altura)/2
+            },
+//asi podemos hacer un set de la area , yo hubiera puesto otro nombre
+            set area(nuevaBase){
+
+                this.base = nuevaBase;
+            }
+        };
+//aqui hacemos el set de la nueva base
+        triangulo3.area = 100;
+
+        document.write(triangulo3.area);
+
+        document.write("</br>");
+
+        let persona = {
+
+            nombre:"Juan",
+
+            apellido:"Díaz",
+
+            get dameNombre(){
+
+                return `${this.nombre} , ${this.apellido}`;
+            },
+
+            set dameNombre(nuevoNombre){
+
+                [this.nombre , this.apellido]=nuevoNombre.split(" ");
+                //el split sirve para separa el string que hemos introducido (nuevoNombre) y cuando detecte
+                //el espacio asignara la primera parte a this.nombre y la segunda a this.apellido.
+
+            }
+        };
+
+        persona.dameNombre="Maria lopez";
+
+        document.write(persona.dameNombre);
+    </script>
+</body>
+</html>

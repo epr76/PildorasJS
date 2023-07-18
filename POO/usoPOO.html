@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let coche = {color : "rojo" , potencia : 400};
+
+        document.write(coche);
+        console.log(coche);
+
+        let mi_Array = new Map(); // este objeto es proporcionado desde JavaScript , sus propiedas del objeto no las hemos creado nosotro.
+        console.log(mi_Array);
+
+        let coche1 = Object.create({color:"Rojo" , potencia:400});// este objeto es creado con la nomenclatura del punto + object.
+        console.log(coche);
+
+        document.write(coche1.color);//para acceder a las propiedas utilizamos la nomenclatura del punto dentro del nombre del objeto.
+
+        //otra forma de acceder a las propiedades es acceder con un array asociativo.
+        document.write(coche["color"]);
+        //para modificar la propiedad lo podemos hacer con los corchetes.
+        coche["color"] = "Azul";
+        document.write(coche["color"]);
+
+        document.write("</br>")
+        //si queremos ampliar las propiedades javascript deja hacerlo y se hace asi.
+        coche["pasajeros"] = 5;
+
+        document.write(coche.pasajeros);
+        console.log(coche);
+
+        for(let i = 0 ; i < 5 ; i++){
+
+            coche[`cilindrada${i}`] = 2000 + (i*100) + " cc";
+        }// con este bucle hemos conseguido crear 4 propiedades que van augmentando su valor en 100 por cada vuelta de bucle.
+        
+        //Una propiedad de un objeto puede ser tambien un objeto.
+        let p1 = {nombre:"Juan", edad:18};
+
+        let coche2 = {color:"amarillo", potencia:290 , propietario:p1};
+        //aqui vemos como p1 se puede incluir en el objeto coche.
+
+        console.log(coche2);
+
+        //para borrar una propiedad se hace de esta manera
+
+        delete coche2.propietario;
+
+        // Cuando la variable haya sido borrada con exito el programa nos devolvera true, por lo tanto si la introducimos en una variable se nos almacenara true.
+
+        let borrado_Exito = delete coche2.potencia;
+
+        document.write(borrado_Exito); //esta variable nos debe imprimir true.
+
+        // con el metodo hasOwnProperty podemos ver si esta propiedad existe.
+        document.write(coche2.hasOwnProperty("propietario"));
+        //tememos que decirle el nombre del objeto que queremos ver , despues punto hasOwnProperty y entre parentesis y comillas la propiedad a examinar.
+
+
+        // para leer todas las propiedades de un objeto , podemos utilizar un bucle for each
+
+        for(let p in coche){
+            document.write(p + " , ");
+        }
+
+    </script>
+</body>
+</html>
