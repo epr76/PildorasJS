@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let numeros = [7,9,12,55,15];
+
+        let datos = [1.5,true,"Juan",{alto:100, ancho:300}];
+
+        let valor = 500;
+
+        let mas_numeros = [valor, valor+100 , valor+200];
+
+        let mas_datos = [[7,{color:"rojo",potencia:350}],[15,{nombre:"Juan",apellido:"Díaz"}]];
+
+        document.write(numeros[2]+ "</br>"); //asi accedemos a la posicion que hemos buscado.
+
+        for (let i = 0; i<4 ;i++){//asi accedemos a todas las posiciones del array (nos sirve si sabemos su longitud.)
+
+            document.write(datos[i]+ "</br>");
+
+        }
+
+        for (let i = 0; i<mas_numeros.length ;i++){//si no nos sabemos la longitud podemos utilizar el length
+        
+            document.write(mas_numeros[i]+ "</br>");
+
+        }
+
+
+
+    </script>
+</body>
+</html>

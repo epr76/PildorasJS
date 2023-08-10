@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let paises = new Array("España", "Colombia" , "Mexico");
+
+        //Bucle for of para recorrer arrays.
+
+        let lista = "";
+
+        for (let pais of paises){
+
+            lista += pais + " , ";
+
+        }
+//Metodo entries para indexar
+
+        for(let [indice , pais2] of paises.entries()){//la primera variables nos almacenara el numero de posicion.
+            
+           // document.write(indice + " " + pais2 + "<br/>");
+
+        }
+//Metodo para recorrer un array con un bucle for each.
+
+        let lista2="";
+
+        paises.forEach(pais3=>{
+
+            lista2 += pais3.toLocaleUpperCase() + " ";
+        });
+        
+        document.write(lista2);
+
+    </script>
+</body>
+</html>

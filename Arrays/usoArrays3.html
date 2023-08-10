@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+//CONSTRUCOR ARRAY()
+        let numeros = new Array();
+
+        let nombres = new Array(5);
+
+        let paises = new Array("España", "Colombia" , "Mexico");
+
+// METODO ARRAY.OF 
+        let mi_numero = new Array(15); //AQUI EN VEZ DE INTRODUCIR UN ENTERO HEMOS CREADO 15 ESPACIOS EN EL ARRAY
+
+        let mi_numero2 =Array.of(15); //AHORA SI HEMOS CREADO UN ARRAY CON UN ESPACIO DE MEMORIA Y UN ENTERO.
+        //IMPORTANTE ESTE METODO NO DEBE LLEVAR EL NEW
+
+//METODO ARRAY.FROM()
+
+        let nuevo_array = Array.from(paises); //Acabamos de copiar el array paises.
+        console.log(nuevo_array);
+
+        //ESTE METODO NOS VA MUY BIEN SI QUEREMOS RECORRER UNA PALABRA.
+
+        let palabra = "sombrilla";
+
+        let nuevo_array2 = Array.from(palabra);
+
+        console.log(nuevo_array2);//AQUI VEMOS COMO EL ARRAY TIENE CADA LETRA DE LA VARIABLE PALABRA.
+
+        function suma_valor(valor){
+
+            return valor*2;
+
+        }
+
+        let array_numeros = new Array(5,10,15,20,25);
+
+        let nuevo_array_numeros = Array.from(array_numeros,suma_valor);
+
+        document.write(nuevo_array_numeros);
+
+    </script>
+</body>
+</html>

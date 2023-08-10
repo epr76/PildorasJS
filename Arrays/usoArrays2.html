@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let numeros = [7,9,12,55,15];
+
+        let datos = [1.5,true, ...numeros ,{alto:100, ancho:300}]; //utilizamos los tres puntos y ponemos el nombre del array de origen al array de destino.
+        
+        //para copiar arrays
+        let copia_numeros = [...numeros];
+
+        numeros[0]= 21;
+
+        copia_numeros[0]= 99;
+
+        for (let i = 0; i<numeros.length ;i++){//si no nos sabemos la longitud podemos utilizar el length
+        
+        document.write(numeros[i]+ "</br>");
+
+    }
+
+    document.write("--------------------------- " + "</br>");
+
+    for(let i = 0; i < copia_numeros.length ; i++){
+
+        document.write(copia_numeros[i] + "</br>");
+    }
+
+    document.write("--------------------------- " + "</br>");
+
+    let nombre = [..."Juan Díaz"];//con esta instruccion partimos el array en los caracteres que incluyen el string.
+    
+    for(let i = 0 ; i < nombre.length ; i++){
+
+        document.write(`nombre[${i}]` + nombre[i] + "</br>");
+    }
+
+    document.write("--------------------------- " + "</br>");
+
+    </script>
+</body>
+</html>

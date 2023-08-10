@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+//CONSTRUCOR ARRAY()
+        let numeros = new Array();
+
+        let nombres = new Array(5);
+
+        let paises = new Array("España", "Colombia" , "Mexico");
+
+// intoducir nuevos metodos a un array.
+
+        paises[3] = "Alemania";//introducir de forma "normal"
+
+        //document.write(paises);
+
+        paises.push("Francia", "Reino Unido", "Chile");//el metodo push introduce al final del array
+
+        paises.unshift("Holanda","Colombia");//el metodo unshift introduce al principio del array.
+        
+//borrado de elementos de un array.
+
+        paises.pop();//borra la ultima posicion de un array 
+
+        paises.shift(); //borra la primera posicion del array.
+        document.write(paises + "<br>");
+
+        delete paises[2]; //borra la posicion 2 del array , pero no elimina la posicion.
+
+        document.write(paises.length);
+    </script>
+</body>
+</html>
