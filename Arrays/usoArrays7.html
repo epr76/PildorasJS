@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+// lectura de array con el forEach. ( forEach su traduccion es por cada.)
+
+        let numeros = [5,10,15,20,25];
+        
+        numeros.forEach(function(elemento_array){document.write(elemento_array + " ")});
+
+        document.write("<br/>");
+// Suma en un array con un forEach y una funcion .
+
+        let resultado_suma = 0;
+
+        numeros.forEach(sumando);
+
+        function sumando(valor){
+
+//El valor lo recogera del array, la primera vez almacenara 5, la segunda sumara 10,etc.
+           
+        resultado_suma+=valor;
+
+        }
+
+        document.write("La suma es : " + resultado_suma);
+        
+        document.write("<br/>");
+//Funciones anonimas 
+
+        numeros.forEach(function(valor){resultado_suma+=valor;});
+        
+        document.write("La suma es : " + resultado_suma);
+    
+        document.write("<br/>");
+
+//Funciones lambda,se utiliza el operador "flecha =>"
+
+        numeros.forEach(valor=>{resultado_suma+=valor;});
+
+        document.write("La suma es : " + resultado_suma);
+    
+        document.write("<br/>");
+//modificar un array 
+
+        numeros.forEach(function(valor , indice , elemento_array){elemento_array[indice] = valor + 1;});
+        
+        document.write(numeros);
+  
+  </script>
+</body>
+</html>

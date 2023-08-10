@@ -90,3 +90,17 @@ Video 11 Condicion IF
 video 12
 video 13 else if:
 Otra forma de concatenar sin utilizar el mas hacemos esta configuracion : document.write (`string${VARIABLE}continuacion string`);
+
+
+Video 43 metodo de la Clase Array():
+    - Metodos para iterar (recorrer) Arrays: Admiten una funcion como primer argumento.
+    la funcion se ejecuta una vez por cada elemento del Array.
+    - La mayoria admiten un segundo argumento que es opcional, si se especifica la funcion es ejecutada como metodo del segundo argumento.
+    - No modifican el Array
+
+    - Podemos recorrer el Array con el forEach.
+    - Sintaxis: nombreArray.forEach(function(nombreElementoArray){instrucciones a hacer la funcion})
+
+    - Funciones lambda o funciones anonimas.
+    - Sintaxis: nombreArray.forEach(nombrefunciont(valor){instrucciones de la funcion});
+    - Son funciones que no tienen nombre , se utiliza
