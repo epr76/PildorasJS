@@ -279,3 +279,23 @@ Video 44 metodos de la clase Array() , map() y filter().
     - filter(), nos hace un filtrado en los elementos de un array siguiendo un criterio , si son valores numericos podemos filtrar diciendo que 
     nos devuelva los elementos mayores a un numero.
     - El metodo filter() nos devolvera un array().
+
+Video 45.  metodos de busqueda de array() : findIndex(), find(), every() , some()
+
+	- findIndex() , sirve para encontrar el indice de una array que le indiquemos.
+
+	- find(), Va a encontrar un elemento que nosotros le digamos.
+
+	- every(), Todos. este metodo nos devolvera true o false si todos los elementos de un array cumplen una condicion.
+	
+
+	- some(), algunos.
+
+Video 46 Arrays , pilas (Stack) y  colas  (Queue)
+
+	- Stack : Stack viene de apilar elementos, 
+
+	- Queue : Queue crea una fila , cuando agregamos un elemento al final de la cola , eliminamos el elemento del principio.
+
+	- Para agregar elementos y borrarlos utilizaremos los metodos push y pop.
+	
