@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // El programa crea un numero aleatorio entre el 0 y 100 (no sabemos cual es)
+
+        // y nosotros tenemos que averiguar que numero es
+
+        // el programa saca una ventana de prompt pidiendote un numero
+
+        // el programa te tiene que ir diciendo el numero es mas alto o el numero es mas bajo
+
+        // y cuando aciertes te tiene que decir los intentos que hayas consumido.
+
+        let numeroAletorio = parseInt( Math.random() * (1-100));
+
+        let numero = parseInt( prompt ("Introduce un numero, por favor"));
+
+        
+        while (numero !== numeroAletorio) {
+
+            numero = parseInt( prompt ("Introduce un numero, por favor"));
+
+            console.log("Número aleatorio:", numeroAletorio);
+            console.log("Número ingresado:", numero);
+                
+             if (numero<numeroAletorio){
+
+                document.write ("El número es mas alto");
+            }   
+
+            else if (numero>numeroAletorio) {
+
+                document.write ("El número es mas bajo");
+
+            }
+            else {
+                document.write ("Has acertado");
+            }
+
+        }
+        
+        
+        
+        
+
+    
+
+    </script>
+</body>
+</html>

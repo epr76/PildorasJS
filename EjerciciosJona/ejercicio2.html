@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        let helado = prompt ("Teclee el helado que desee")
+        let heladosin = 1.90;
+        let heladooreo = 1;
+        let heladokitkat = 1.50;
+        let heladobrownie = 0.75;
+        let heladolacasitos = 0.95;
+
+
+        if (helado == "Helado sin topping") 
+            document.write ("te costará " + heladosin + "€" );
+        
+        else if (helado == "Helado con topping de oreo"){
+            document.write ("te costará " + (heladosin + heladooreo) + "€");
+        }
+         else if (helado == "Helado con topping de kitkat"){
+            document.write ("te costará " + (heladosin + heladokitkat) + "€");
+         }
+
+         else if (helado == "Helado con topping de brownie") {
+            document.write ("te costará " + (heladosin + heladobrownie) + "€");
+         }
+         else if (helado == "Helado con topping de lacasitos"){
+            document.write ("te costará " + (heladosin + heladolacasitos) + "€");
+         }
+         else {
+            document.write ("No tenemos este topping, lo sentimos")
+         }
+
+    </script>    
+</body>
+</html>
