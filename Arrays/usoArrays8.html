@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+//metodo map haciendo el cuadrado
+
+        let numeros = [5,10,15,20,25];
+
+        function cuadrado_valores(valor){
+
+                return valor*valor;
+
+        };
+
+        document.write(numeros.map(cuadrado_valores));
+
+        console.log(numeros.map(cuadrado_valores));
+
+        document.write("</br>");
+
+//metodo map sacando la raiz cuadrada de los elementos del array()
+
+        let numeros2 = [5,10,15,20,25];
+
+        function raiz_valores ( valor ){
+
+                return Math.sqrt(valor); //metodo para hacer la raiz cuadrada.
+        };
+
+        document.write(numeros2.map(raiz_valores));
+
+        document.write("</br>");
+
+        //podemos hacer esta instruccion utilizando funciones lambda 
+
+        document.write(numeros2.map(valor=>Math.sqrt(valor)));
+
+        console.log(numeros2.map(raiz_valores));
+
+        document.write("</br>");
+
+//metodo map sacando la altura ideal .
+
+        let alturas = [190,170,175,200,160];
+
+        function peso_ideal(valor){
+
+                return "Peso ideal : " + (valor-110);
+
+        };
+
+        document.write(alturas.map(peso_ideal));
+
+        console.log(alturas.map(altura_persona=> "Peso ideal: " + (altura_persona - 110)));//podemos hacer esta instruccion utilizando funciones lambda 
+
+        document.write("</br>");
+
+//utilizamos el metodo filter()
+
+        let edades = [35,1,5,25,69,81,36,51,55];
+
+        function edad_laboral (edad){
+                if(edad>=18 && edad<=67){
+                        return edad;
+                };
+        };
+
+        document.write(edades.filter(edad_laboral));
+
+        console.log(edades.filter(edad_laboral=>edad_laboral>=18 && edad_laboral<=67)); // lo mismo pero con funcion lambda
+        
+
+  </script>
+</body>
+</html>

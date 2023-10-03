@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let edades = [35,15,25,69,81,36,51,55];
+
+        let nombres = ["Ana", "Juan" , "Pedro", "Maria" ,"Juan"];
+
+// Metodo findIndex().
+
+        document.write(nombres.findIndex(encontrar=>encontrar=="Pedro"));
+//en la funcion anonima hemos hecho lo mismo que con un if, si buscaramos el nombre "Juan" como esta repetido solo nos devolvera el 
+// indice del primero.
+        
+        document.write("</br>");
+
+//ahora buscaremos el indice con valores numericos.
+
+        document.write(edades.findIndex(encontrar=>encontrar == 36));
+
+        document.write("</br>");
+
+        document.write(edades.findIndex(encontrar=>encontrar < 30 ));
+// de esta forma estamos buscando aquel elemento que sean mayor que 30 
+        document.write("</br>");
+
+// Metodo find()
+
+        document.write(edades.find(encontrar=>encontrar%2==0));
+// Con este metodo nos devuelve el elemento , que es divisible entre dos.
+        document.write("</br>");
+
+
+
+        document.write(nombres.find(encontrar=>encontrar.charAt(0) == 'J'));
+//Ahora con el metodo find ,vamos a buscar el primer elemento que comienza por J
+//Haremos uso tambien del metodo charAt , para indicar la posicion 0 del string.
+//Tambien utilizaremos un if para indicar que tiene que ser el caracter J.
+        document.write("</br>");
+
+        document.write(nombres.find(encontrar=>encontrar.charAt(encontrar.length-1) == 'o')); 
+//Ahora buscamos el elemento que termine por la letra o.
+//en el charAt introduciremos el metodo length -1 para saber la longitud de esa palabra y restarle uno.
+//Entonces tendremos la posicion final de el elemento , ahora solo tenemos que utilizar el igual igual con comillas simples y una o.
+        document.write("</br>");
+
+// Metodo every() "todos"
+
+        document.write(edades.every(menores=> menores<100));
+//hemos utilizado este metodo para buscar si todos los elementos son menores que 100.
+        document.write("</br>");
+
+//metodo some() "Algunos"
+        document.write(edades.some(menores=> menores<100));
+//nos devolvera true si alguno es menor que 100.
+
+  </script>
+</body>
+</html>

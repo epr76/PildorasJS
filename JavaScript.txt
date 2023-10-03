@@ -90,6 +90,171 @@ Video 11 Condicion IF
 video 12
 video 13 else if:
 Otra forma de concatenar sin utilizar el mas hacemos esta configuracion : document.write (`string${VARIABLE}continuacion string`);
+video 14 switch:
+todo lo que se introduce en una ventana prompt es texto, esto se tiene que tener en cuenta a la hora de programar.
+a la hora de hacer el switch, tenemos que introducir las comillas para que asi este evaluando la condicion como un string.
+con el operador === ( tres iguales ) tiene que coincidir el valor ( lo que contiene) y el tipo ( si es un string o un entero)
+con parseInt(), cambiaremos el tipo de string a entero.
+Number.parseInt(); esto es un metodo. que hace lo mismo que el parseInt();
+Video 15: bucles while y do-while
+con el bucle do-while , como minimo se ejecutara el codigo del interior, aunque la condicion sea false.
+video 16 bucle for:
+for(inicializacion;condicion;incremento){codigo a ejecutar}
+
+video 17 bucle for of:Se suele utilizar para recorrer arrays. let edades = [7,9,15,25,37];| para imprimir en pantalla , document.write(edades[2]); ( nos muestra 9 en este array). En un array en JavaScript podemos mezclar tipos ( Strings, booleans), 
+tambien podemos declarar posiciones sin introducir nada ( en el navegador nos saldra undefined)
+sintaxis bucle for of --- for (let i of edades){document.write(i); } y ya escribiriamos en el navegador todo el contenido
+video 18 bucle for of:
+video 19 bucle for of y arrays bidimensionales : let edades = [[1,7,9],[5,6,8],[2,5,9]];, para mostrar informacion de la posicion 1 del array , hariamos document.write(edades(1); y nos mostraria en el navegador 5,6,8;
+si queremos ver por ejemplo el 6 solamente hacemos document.write([1],[1]);
+Para recorrer este bucle en totalidad, haremos un bucle for: ---for(let i = 0 ; i<3 ; i++){ for ( let j = 0 ; j<3 ; j++){document.write(edades[i][j] + "</br>");}
+Para hacerlo con un for of, lo haremos asi:--- for (dim1 of datos){for(dim2 of dim1){document.write(dim2);}}
+Video 20 bucle for in : Sirven para recorrer objetos, se pueden utilizar para mas cosas pero su funcion principal es esa.
+Video 21 saltos e interrupciones break I: Saltos e interrupciones disponibles : break / continue / return /yield /thorw /try,catch,finally.
+
+POO
+video 31.JavaScript su programacion orientada objetos funciona con prototipos, funciona algo distinto que otros lenguajes de programacion su POO (Java,C++,etc). En JavaScript han introducido el sintact sugar, que es al final que acepta la sintaxis que utilizamos en otros lenguajes.
+Que es la herencia en JS, en programacion de forma jerarquica se agregaran los metodos y propiedades de la clase mas alta de la jerarquia , entre todos los demas.
+como crear un objeto en JS? para crear un objeto podemos hacerlo asi :
+- let coche = {color:"rojo", potencia:400};
+Para acceder a cualquier propiedad haremos un document.write(coche.color);  con la propiedad del punto nos dira el valor del color del coche.
+En otros lenguajes de programacion cuando creamos un objeto ese objeto ya esta heredando automaticamente de una superclase que se llama object. En cambio en JAVASCRIPT hereda de un prototipo denominado Object.
+video 32. 
+cuando creamos un objeto con el operador NEW , en el caso de crear un objeto de tipo array con el operador new, este array recojera todas las propiedas del tipo array ( constructor ,etc) y todas las propiedades del tipo object. se puede ver en el devtool en la consola.
+Tambien podemos crear un objeto con la nomenclatura del punto y create. 
+let coche = Object.create({aqui creamos sus propiedades del objeto});
+Tambien podemos acceder a las propiedas podemos utilizar los arrays asociativos ( ni puta lo que es)
+Con javascript podemos ampliar las propiedades del objeto de forma dinamica , que quiere decir que al principio del programa creamos un objeto pero despues de llevar unas lineas de ejecucion , le indicamos al programa que dicho objeto tendra otra propiedad mas.
+creas el objeto de tipo coche con propiedades color y potencia, despues de unas lineas le indicas tmabien el numero de pasajeros .
+video 33
+Una propiedad de un objeto puede ser tambien un objeto.
+let p1 = {nombre:"Juan",edad:18};
+let coche = {color:"rojo",potencia:400,propietario:p1}; aqui vemos como p1 se puede incluir en el objeto coche.
+
+para borrar una propiedad se puede hacer incluyendo delete coche.propietario., el borrado si ha sido con exito nos devolvera true, por lo tanto podemos crear una variable que cuando la propiedad haya sido borrada nos devuelva true y asi tener control del borrado.
+let borrado_exito = delete coche.propietario;
+
+otro metodo es el HasOwnProperty , si introducimos en un document.write(nombreObjeto.hasOwnProperty("nombre propiedad")); esto nos devolvera un false si esta borrado o un true si esta.
+
+video 34
+
+Para copiar propiedades de un objeto a otro , podemos utilizar un bucle for each. En el bucle for each crearemos una variable en la cual almacenaremos en cada vuelta de bucle la propiedad del anterior objeto y en el lado del of utilizaremos el Object.keys(objeto del cual queremos sacar sus claves(propiedades)
+for (let clave of Object.keys(objeto del cual queremos sacar las propiedas o claves){
+objeto[clave] = objeto [clave];
+}
+Asignaremos en cada vuelta de bucle una propiedad del objeto "origen".
+
+Ahora podemos utilizar el metodo Assign, hay que poner el nombre object , con el metodo del punto y assign , tendremos que introducir el objeto de destino y el objeto de destino.
+Object.assign(objeto destino , objeto origen);
+
+Serializar es convertir un objeto a String. se utiliza con el objetivo para pasar objetos por la red de un ordenador a un ordenador remoto, por un chat. Se utiliza para que sea mas sencillo a la hora de guardar la informacion.
+Deserializar es convertir un String en un objeto.
+Esto se hace utilizando el objeto JSON
+Para serializar creamos una variable y introducimos el objeto JSON con el metodo stringify y despues entre parentesis el objeto a serializar.
+let cocheSerializado = JSON.stringify(coche);
+si ahora hacemos un console.log encontramos todos los parametros de coche en un string.
+
+Para deserializar un string utilizamos el metodo JSON.parse , la forma de utilizarlo es igual que el metodo stringify.
+let cocheDeserializado = JSON.parse(cocheSerializado);
+
+El metodo toString , sirve para pasar la informacion del objeto a texto.
+
+video 35
+El metodo toLocalString sirve para devolver el string adaptado a la configuracion regional de donde se va a ejecutar el programa , por ejemplo no se representa igual las fechas en eeuu(año, mes,dia) que en españa(dia,mes,año).
+
+El metodo valueOF, nos devuelve el valor que representa un objeto.
+
+spread operator sirve para copiar propiedades de distintos objetos
+let suv = {...objeto,...objeto};
+
+Video 36
+
+Abreviatura de metodos, ahora podemos abreviar los metods de un objeto . lo haremos asi:
+- propiedad : function(){return "parametros a introducir";}
+ahora con la abreviatura podemos hacer:
+- propiedad(){return "parametros a introducir";}
+
+getters/setters.
+
+video 37 ARRAYS.
+
+- Que son? Son una coleccion ordenada de valores, cada valor es denominado elemento , cada elemento tiene una posicion numerica dentro del array , conocida como indice.
+- En JavaScript los arrays NO tienen tipos.
+- Los elementos del Array pueden ser cualquier cosa: Primitivos, objetos e incluso otro Array.
+- Son dinamicos , que quiere decir que conforme el programa se esta ejecutando se puede ir augmentando su tamaño y ir añadiendo valores.
+- Los indices no tienen porque son continuos , que quiere decir que un array de 5 elementos puede ser que la posicion 0 y 2 este rellena ,pero las demas no.
+- Todos los arrays tienen la propiedad length.
+- Los Arrays heredan sus propiedades del prototipo Array prototype.
+- ES6 incluye en su especificacion un nuevo tipo : los "array typed". Tienen una longitud fija, acceso a nivel de byte, gran rendimiento.
+
+Tenemos 4 formas de crear Arrays en JavaScript.
+
+- Arrays literales: 
+	- let nombreArrays = [] ; array creado pero vacio.
+	- let numeros = [7,9,12,55,15]; array creado con 5 numeros.
+	- let datos = [1.5, true, "juan",{alto:100, ancho:300}]; Aqui podemos ver como un array puede incluir distintos datos (hasta objetos).
+	- Podemos crear un array que modifique el valor :
+		- let valor = 500;
+		- let mas_numeros = [valor, valor+100,valor+200];
+	- Podemos crear un array anidado.
+		- let mas_datos = [[7,{color:"rojo",potencia:350}],[15,{nombre:"Juan",apellido:"Díaz"}]];
+
+- Arrays Spread Video 38.
+	- El operador Spread , nos permite añadir datos de un array a otro.
+		- let numeros = [7,9,12,55,15]; 
+		- let datos = [1.5, true, ...numeros ,{alto:100, ancho:300}]; utilizamos los tres puntos y ponemos el nombre del array de origen al array de destino.
+	- Este operador es muy util para copiar un array.
+		- let numeros = [7,9,12,55,15];
+		- let copia_numeros = [...numeros]; de esta forma hemos copiado todo el array.
+	- Con este operador tambien podemos dividir los caracteres del texto en un array 
+		- let nombre= [..."Juan diaz"];
+-Arrays con constructor Array() video 39 :
+	- Sintaxis: let nombreArray = new Array(); 
+	- Es lo mismo que haber utilizado literales [].
+	-Si en la sintaxis queremos especificar la cantidad de elementos lo haremos asi let nombreArray = new Array(5);
+-Array of().
+	- Este metodo sirve por si queremos introducir un numero en un array de un solo elemento.
+	- Sintaxis erronea: let nombreArray =  new Array(15); Esta sintaxis consigue crear 15 espacios de array no introducir el numero 15 en un array.
+	- Sintaxis correcta : let nombreArray =Array.of(15); Ahora si nos introduce el numero 15.IMPORTANTE NO DEBE LLEVAR EL NEW
+-Array from().
+	- Este metodo nos permite contruir arrays a partir de cualquier elemento iterable que se pueda recorrer con un bucle.
+	- Sintaxis : let nombreArrayDestino = Array.from(nombreArrayOrigen);
+	- Este metodo tambien podemos pasarle una funcion para que nos haga cualquier operacion matematica del array de origen.
+	- Sintaxis :  let nombreArrayDestino = Array.from(nombreArrayOrigen , nombreFunction );
+
+Video 40 borrar elementos de array.
+	- para introducir nuevos elementos a un array podemos utilizar el metodo push, este metodo agregara siempre el elemento al FINAL del array .
+	- sintaxis : nombreArray.push(elementos a introducir);
+
+	- Para introducir elementos al PRINCIPIO del array , utilizaremos el metodo unshift.
+	- Sintaxis : nombreArray.unshift(elementos a introducir);
+	
+	- Para borrar la ULTIMA posicion del array, utilizamos la instruccion pop.
+	- Sintaxis: nombreArray.pop
+
+	- Para borrar la PRIMERA posicion del array, utilizamos la instruccion shift.
+	- Sintaxis: nombreArray.shift
+
+	- El metodo delete nos borra el elemento pero no quita la posicion.
+	- Sintaxis : delete nombreArray[posicionArray];
+
+video 41 recorriendo arrays.
+	- Podemos recorrer arrays con el bucle for of.
+	- Sintaxis: for (let nombreVariable of nombreArray){instruccion que quieras hacer al recorrer cada bucle.};
+	- Viene muy bien para recorrer un bucle completo.
+
+	- Para indexar un bucle for of lo haremos con el metodo entries()
+	- Sintaxis: for (let [nombreIndice , nombreVariableforOf] of nombreArray.entries()){Instruccion ha realizar};
+
+	- Otra forma de recorrer un array es con un bucle for each.
+	- Sintaxis: nombreArray.forEach(nombreVariable=>{insctruccion});
+
+video 42 arrays multidimensionales.
+	- En JavaScript , no hay arrays multidimensionales . Pero se puede simular introduciendo un array dentro de otro array.
+	- Sintaxis: let nombreArray = [[Elementos dentro del array],[Elementos dentro del array]];
+	- Para poder recorrer acceder a la posicion que queramos utilizaremos esta sintaxis: nombreArray[posicionArrayPadre][posicionArrayHijo];
+
+	- Con el metodo push podemos agregar otro array.
 
 
 Video 43 metodo de la Clase Array():
@@ -103,4 +268,34 @@ Video 43 metodo de la Clase Array():
 
     - Funciones lambda o funciones anonimas.
     - Sintaxis: nombreArray.forEach(nombrefunciont(valor){instrucciones de la funcion});
-    - Son funciones que no tienen nombre , se utiliza
+    - Son funciones que no tienen nombre 
+
+Video 44 metodos de la clase Array() , map() y filter().
+
+    - map(), lo que hace es actuar sobre cada elemento del array , haciendo la operacion con ese elemento que nosotros especifiquemos.
+    - El metodo map(), nos va a devolver un array modificado .
+    - Sintaxis: nombreArray.map(function);
+
+    - filter(), nos hace un filtrado en los elementos de un array siguiendo un criterio , si son valores numericos podemos filtrar diciendo que 
+    nos devuelva los elementos mayores a un numero.
+    - El metodo filter() nos devolvera un array().
+
+Video 45.  metodos de busqueda de array() : findIndex(), find(), every() , some()
+
+	- findIndex() , sirve para encontrar el indice de una array que le indiquemos.
+
+	- find(), Va a encontrar un elemento que nosotros le digamos.
+
+	- every(), Todos. este metodo nos devolvera true o false si todos los elementos de un array cumplen una condicion.
+	
+
+	- some(), algunos.
+
+Video 46 Arrays , pilas (Stack) y  colas  (Queue)
+
+	- Stack : Stack viene de apilar elementos, 
+
+	- Queue : Queue crea una fila , cuando agregamos un elemento al final de la cola , eliminamos el elemento del principio.
+
+	- Para agregar elementos y borrarlos utilizaremos los metodos push y pop.
+	
